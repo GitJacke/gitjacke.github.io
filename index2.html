@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Altizure API Demo</title>
+    <title>TXA Altizure API Demo</title>
   </head>
   <body>
     <div id="main" />
@@ -121,12 +121,13 @@
           const state = randomState(20) 
           setCookie('state', state)
           const authUrl = `https://api.altizure.com/auth/start?client_id=${key}&response_type=token&redirect_uri=${callback}&state=${state}`
-		console.log("authURL "+authUrl)
+		
 		 document.getElementById('main').innerHTML = '
             <h1>Altizure TEST API App</h1>
             <button type='reset' onclick="location.href='${authUrl}'">
               Login
             </button>
+			<h2>«Î«Ûƒ⁄»›£∫${authUrl}</h2>
           '
         }
       } else {
