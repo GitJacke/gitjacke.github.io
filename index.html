@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="广州天翔航空科技有限公司、天翔、天翔航空、无人机、植保、植保无人机、无人机喷药、测绘无人机、植保无人机、TXA、翔农无人机、翔农616、翔农610、Skycam1200">
+  <meta name="description" content="广州天翔航空科技有限公司致力于于植保无人机开发和行业应用，专注农业航空领域。目前核心产品有：TXA-616翔农植保无人机、TXA-610翔农植保无人机及Skycam1200微型测绘无人机，其中TXA-翔农植保无人机通过了500小时无障碍工作测试。">
+  <meta name="author" content="admin">
+  <title>TXA登录/注册</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" type="image/jpg" href="images/logo.jpg" sizes="45x45" />
+  <link rel="stylesheet" type="text/css" href="css/public.css" />
+  <link rel="stylesheet" type="text/css" href="css/page_common.css" />
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+</head>
+
+<body>
+
+  <div class="lr-container clearfix">
+
+
+    <div class="lr-header">
+      <div class="header-auto">
+        <a href="http://www.txauav.com">
+          <img src="images/logo.jpg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="lr-main clearfix">
+      <div class="page-left">
+        欢迎来到&nbsp;TXA
+      </div>
+
+      <div class="page-right">
+        <div class="lr-title" id="lr_title">
+          登录
+        </div>
+        <!--登录页面-->
+        <div class="form" id="login">
+          <div class="form_wrap">
+            <!--账号-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <i class="iconfont icon-username"></i>
+                  <input type="text" id="username_lg" maxlength="50" class="md-input" placeholder="手机号/用户名/邮箱">
+                </div>
+              </div>
+            </div>
+
+            <!--密码-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <i class="iconfont icon-password"></i>
+                  <input type="password" id="password_lg" class="md-input" placeholder="密码">
+                  <div id="modify-password">
+                    <a href="html/modifyPassWord.html">忘记密码？</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--验证码-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required position-re">
+                  <i class="iconfont icon-code"></i>
+                  <input type="text" id="verify_code" class="md-input" placeholder="验证码">
+                  <div class="img-code"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="md-error" id="login_tips"></div>
+            </div>
+
+            <button type="button" id="login_btn" autofocus="autofocus" class="btn login-btn primary">登录</button>
+
+            <div class="line">
+              <div class="bg-orange line-text">尚未注册帐号？</div>
+            </div>
+
+            <button type="button" autofocus="autofocus" class="btn create-btn second" id="to-register">注册 </button>
+          </div>
+
+        </div>
+
+        <!--注册页面-->
+        <div class="form" id="register">
+          <div class="form_wrap">
+            <!--账号-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label>用户昵称</label>
+                  <input type="text" id="username" maxlength="50" class="md-input" placeholder="请输入昵称">
+                  <div class="md-error" id="yes_tips">用户昵称以字母开头6~18位字符</div>
+                  <div class="md-error" id="username_tips"></div>
+                </div>
+              </div>
+            </div>
+            <!--密码-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label>设置密码</label>
+                  <input type="password" id="password" class="md-input" placeholder="请设置密码">
+                  <div class="md-error" id="yes_tips_pass">密码由6~16位数字字母组成</div>
+                  <div class="md-error" id="password_tips">密码不能为空</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label>确认密码</label>
+                  <input type="password" id="re_password" class="md-input" placeholder="请再次确认密码">
+                  <div class="md-error" id="repassword_tips">密码不一致</div>
+                </div>
+              </div>
+            </div>
+
+            <!--公司或个人名称-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label style="line-height: 45px;">名称</label>
+                  <input type="text" id="owner" class="md-input" placeholder="请输入个人或公司名称">
+                  <div class="md-error" id="owner_tips">个人或公司名称不能为空</div>
+                </div>
+              </div>
+            </div>
+
+            <!--地址-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label>地区地址</label>
+                  <!--<input type="text" name="password" class="md-input" placeholder="请选择地区">-->
+                  <select class="md-input" id="province">
+                    <option selected="selected">请选择地区</option>
+                    <option value="北京市">北京市 </option>
+                    <option value="天津市">天津市 </option>
+                    <option value="上海市">上海市 </option>
+                    <option value="重庆市">重庆市 </option>
+                    <option value="河北省">河北省 </option>
+                    <option value="山西省">山西省 </option>
+                    <option value="辽宁省">辽宁省 </option>
+                    <option value="吉林省">吉林省 </option>
+                    <option value="黑龙江省">黑龙江省</option>
+                    <option value="江苏省">江苏省 </option>
+                    <option value="浙江省">浙江省 </option>
+                    <option value="安徽省">安徽省 </option>
+                    <option value="福建省">福建省 </option>
+                    <option value="江西省">江西省 </option>
+                    <option value="山东省">山东省 </option>
+                    <option value="河南省">河南省 </option>
+                    <option value="湖北省">湖北省 </option>
+                    <option value="湖南省">湖南省 </option>
+                    <option value="广东省">广东省 </option>
+                    <option value="海南省">海南省 </option>
+                    <option value="四川省">四川省 </option>
+                    <option value="贵州省">贵州省 </option>
+                    <option value="云南省">云南省 </option>
+                    <option value="陕西省">陕西省 </option>
+                    <option value="甘肃省">甘肃省 </option>
+                    <option value="青海省">青海省 </option>
+                    <option value="台湾省">台湾省 </option>
+                    <option value="广西壮族自治区">广西壮族自治区</option>
+                    <option value="内蒙古自治区">内蒙古自治区</option>
+                    <option value="西藏自治区">西藏自治区</option>
+                    <option value="宁夏回族自治区">宁夏回族自治区 </option>
+                    <option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+                    <option value="香港特别行政区">香港特别行政区</option>
+                    <option value="澳门特别行政区">澳门特别行政区</option>
+
+                  </select>
+                  <div class="md-error" id="province_tips">请选择地区</div>
+                </div>
+              </div>
+            </div>
+            <!--手机验证码-->
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label style="line-height: 45px;">+86</label>
+                  <input type="text" id="iphone" class="md-input" placeholder="请手机号码">
+                  <button type="button" autofocus="autofocus" id="send_code" class="btn inner-button primary lg">发送验证码</button>
+                  <div class="md-error" id="iphone_tips">手机号码不能为空</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="d-input">
+                <div class="md-input-container md-input-required">
+                  <label>验证码</label>
+                  <input type="text" id="verifyCode" class="md-input" placeholder="短信验证密码">
+                  <div class="md-error" id="code_tips">验证码必填</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!---->
+            </div>
+            <button autofocus="autofocus" id="register_btn" class="btn login-btn primary">注册</button>
+            <a id="to-login">立即登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/mark_wrap.js"></script>
+  <script src="js/cookie.js"></script>
+  <script src="js/canvas-particle.js"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var config = {
+        vx: 4,
+        vy: 4,
+        height: 2,
+        width: 2,
+        count: 100,
+        color: "255, 0, 0",
+        stroke: "218,112,214",
+        dist: 40000,
+        e_dist: 60000,
+        max_conn: 25
+      }
+      CanvasParticle(config);
+    }
+  </script>
+</body>
+
+</html>
