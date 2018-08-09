@@ -1,12 +1,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Altizure API Minimal Demo</title>
+    <title>Altizure API Demo</title>
   </head>
   <body>
     <div id="main" />
     <script>
-	//https://api.altizure.cn/auth/start?client_id=l8aDRe0JzBPgkZrFHv1F1oHZV0zPznfexJg4OKp&response_type=token&redirect_uri=
       const key = 'l8aDRe0JzBPgkZrFHv1F1oHZV0zPznfexJg4OKp'
       const callback = 'https://gitjacke.github.io/index2.html'
       
@@ -110,7 +109,7 @@
           // callback
           const prevState = getCookie('state')
           if (state !== prevState) {
-            document.getElementById('main').innerHTML = '<h1>Invalid state!</h1>'
+            document.getElementById('main').innerHTML = '<h1>API Invalid state!</h1>'
           } else {
             setCookie('token', token, 90)
             deleteCookie('state')
@@ -122,12 +121,12 @@
           const state = randomState(20) 
           setCookie('state', state)
           const authUrl = `https://api.altizure.com/auth/start?client_id=${key}&response_type=token&redirect_uri=${callback}&state=${state}`
-          document.getElementById('main').innerHTML = `
+          document.getElementById('main').innerHTML = ¡°
             <h1>Altizure TEST API App</h1>
             <button type='reset' onclick="location.href='${authUrl}'">
-              Login with Altizure account
+              Login
             </button>
-          `
+          ¡±
         }
       } else {
         renderProjectNames(tokenCookie)
