@@ -121,7 +121,8 @@
           const state = randomState(20) 
           setCookie('state', state)
           const authUrl = `https://api.altizure.com/auth/start?client_id=${key}&response_type=token&redirect_uri=${callback}&state=${state}`
-          document.getElementById('main').innerHTML = ¡°
+		console.log("authURL "+authUrl);
+		 document.getElementById('main').innerHTML = ¡°
             <h1>Altizure TEST API App</h1>
             <button type='reset' onclick="location.href='${authUrl}'">
               Login
