@@ -124,8 +124,13 @@
         setCookie('state', state)
         const authUrl = `https://api.altizure.com/auth/start?client_id=${key}&response_type=token&redirect_uri=${callback}&state=${state}`
 
-        document.getElementById('main').innerHTML = '<h1> Altizure API Demo App</h1> <button type=\'reset\' onclick="location.href=\'${authUrl}\'">Login with Altizure account</button><h3>��������:${authUrl}</h3>'
-        }
+        document.getElementById('main').innerHTML = `
+        <h1>Altizure API Demo App</h1>
+        <button type='reset' onclick="location.href='${authUrl}'">
+          Login with Altizure account
+        </button><h1>'${authUrl}'</h1>
+      `
+      }
     } else {
       renderProjectNames(tokenCookie)
     }
