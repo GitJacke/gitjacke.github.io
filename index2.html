@@ -6,6 +6,8 @@
 </head>
 
 <body>
+  <div id="author"/>
+  <br/>
   <div id="main" />
   <script>
     const key = 'l8aDRe0JzBPgkZrFHv1F1oHZV0zPznfexJg4OKp'
@@ -123,7 +125,7 @@
         const state = randomState(20)
         setCookie('state', state)
         const authUrl = `https://api.altizure.com/auth/start?client_id=${key}&response_type=token&redirect_uri=${callback}&state=${state}`
-
+        document.getElementById('author').innerHTML=authUrl+""
         document.getElementById('main').innerHTML = `
         <h1>Altizure API Demo App</h1>
         <button type='reset' onclick="location.href='${authUrl}'">
