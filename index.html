@@ -93,7 +93,7 @@
         const projects = json.data.my.projects
         const totalCount = projects.totalCount
         const list = projects.edges.map(function (edge) {
-          return `<li>${edge.node.name}</li>`
+          return `<li>name:${edge.node.name} id:${edge.node.id}</li>`
         })
         const html = `
             <h1>Welcome ${user}!</h1>
