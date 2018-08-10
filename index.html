@@ -10,8 +10,8 @@
   <br/>
   <div id="main" />
   <script>
-    const key = '2QCXxgwagTATEOiPDtGf5Js7EZholsxcpJCZBHo'
-    const callback = 'https://gitjacke.github.io/index2.html'
+    const key = 'hZttkCmIHoBcPoBmW5Mwf9y4MtkPApX4w5US1mB'
+    const callback = 'https://gitjacke.github.io/index.html'
 
     function randomState(length) {
       let text = ''
@@ -113,7 +113,7 @@
         // callback
         const prevState = getCookie('state')
         if (state !== prevState) {
-          document.getElementById('main').innerHTML = '<h1>API Invalid state!</h1>'
+          document.getElementById('main').innerHTML = '<h1>Token!</h1>'
         } else {
           setCookie('token', token, 90)
           deleteCookie('state')
