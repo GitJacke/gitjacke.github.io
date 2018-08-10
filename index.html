@@ -75,6 +75,10 @@
                   node {
                     name
                     id
+                    geoInfo{
+                      centerLat
+                      centerLong
+                    }
                   }
                 }
               }
@@ -94,7 +98,7 @@
         const projects = json.data.my.projects
         const totalCount = projects.totalCount
         const list = projects.edges.map(function (edge) {
-          return `<li>name:${edge.node.name} id:${edge.node.id}</li>`
+          return `<li>name:${edge.node.name} id:${edge.node.id} centerLat:${edge.node.geoInfo.centerLat} centerLong:${edge.node.geoInfo.centerLong}</li>`
         })
         const html = `
             <h1>Welcome ${user}!</h1>
